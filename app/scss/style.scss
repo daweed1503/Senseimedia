@@ -1,0 +1,37 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+// @import "libs";
+@import "global";
+
+
+.header{
+  padding: 15px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__phone{
+    background: $btn;
+    color: #fff;
+    @extend %manrope-600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 35px;
+    border-radius: 9px;
+  }
+}
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__item{
+    @extend %manrope-500;
+    line-height: 24px;
+    & + .menu__item{
+      padding-left: 30px;
+    }
+  }
+}

@@ -4,10 +4,16 @@ body{
 }
 
 body{
+  display: flex;
+  flex-direction: column;
   @extend %manrope-400;
   font-size: 16px;
   line-height: 26px;
   color: $default;
+}
+
+main{
+  flex-grow: 1;
 }
 
 .container{

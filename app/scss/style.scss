@@ -13,14 +13,11 @@
     align-items: center;
   }
   .header__phone{
-    background: $btn;
-    color: #fff;
-    @extend %manrope-600;
+    @extend %btn;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px 35px;
-    border-radius: 9px;
+    
   }
 }
 .menu{
@@ -34,4 +31,48 @@
       padding-left: 30px;
     }
   }
+}
+.footer-top{
+  padding: 50px 0 70px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 325px;
+  }
+  .footer-top__privacy{
+    display: block;
+    margin-bottom: 22px;
+    padding-left: 12px;
+    line-height: 24px;
+    transition: all .3s;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .footer-top__contact{
+    @extend %btn;
+    display: inline-block;
+    margin-left: 12px;
+  }
+  &__item-title{
+    @extend %manrope-600;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  &__item-list{
+    line-height: 36px;
+  }
+}
+.footer-copy{
+  background-color: #2D2D2D;
+  color: #fff;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }

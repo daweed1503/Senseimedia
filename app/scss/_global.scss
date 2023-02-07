@@ -14,10 +14,18 @@ body{
 
 main{
   flex-grow: 1;
+  background-color: $bg;
 }
 
 .container{
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title{
+  @extend %manrope-700;
+  font-size: 38px;
+  line-height: 48px;
+  text-transform: uppercase;
 }

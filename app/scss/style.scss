@@ -1,12 +1,18 @@
 @import "vars";
 @import "fonts";
 @import "reset";
-// @import "libs";
 @import "global";
 
 
 .header{
-  padding: 15px 0;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0px 4px 18px rgb(0 0 0 / 15%);
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -31,6 +37,12 @@
       padding-left: 30px;
     }
   }
+  &__link{
+    transition: all .3s ease;
+    &:hover{
+      color: #b05bd1;
+    }
+  }
 }
 .footer-top{
   padding: 50px 0 70px;
@@ -48,13 +60,18 @@
     line-height: 24px;
     transition: all .3s;
     &:hover{
-      text-decoration: underline;
+      color: #b05bd1;
     }
   }
   .footer-top__contact{
     @extend %btn;
     display: inline-block;
     margin-left: 12px;
+    transition: all .3s ease;
+    &:hover{
+      transform: scale(1.05);
+      color: #d3e014;
+    }
   }
   &__item-title{
     @extend %manrope-600;
@@ -66,6 +83,13 @@
   &__item-list{
     line-height: 36px;
   }
+  &__item-item{
+    transition: all .3s ease;
+    &:hover{
+      transform: scale(1.1);
+      color: #b05bd1;
+    }
+  }
 }
 .footer-copy{
   background-color: #2D2D2D;
@@ -75,4 +99,149 @@
   justify-content: center;
   align-items: center;
   font-size: 14px;
+}
+.main-page{
+  padding-top: 220px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    @extend %manrope-800;
+    font-size: 45px;
+    line-height: 65px;
+    margin-bottom: 15px;  
+    span{
+      @extend %manrope-500;
+      font-size: 55px;
+      text-transform: uppercase;
+    }
+  }
+  &__subtitle{
+    @extend %manrope-500;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .main-page__link{
+    background-color: #77B2D3;
+    border-radius: 250px;
+    color: #fff;
+    padding: 15px 30px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      background-color: #25709b;
+    }
+    & + .main-page__link{
+      margin-left: 5px;
+    }
+  }
+}
+.about{
+  margin: 90px 0 37px;
+  &__inner{
+    padding: 40px 70px 55px 55px;
+    background-color: #fff;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__info-textbox{
+    border-right: 1px solid #C7C7C7;
+    padding-right: 60px;
+    &:last-child{
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+  &__info-title{
+    @extend %manrope-800;
+    color: $gradient;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  &__info-subtitle{
+    @extend %manrope-500;
+  }
+}
+.services{
+  padding: 37px 0 45px;
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+  }
+  &__item-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+  }
+  &__item{
+    background-color: #FFF;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    padding: 15px 15px 10px 15px;
+    p{
+      text-align: center;
+      padding-top: 10px;
+      border-top: 1px solid #E2E2E2;
+    }
+    span{
+      @extend %manrope-800;
+      font-size: 30px;
+      color: $gradient;
+    }
+  }
+  &__item-title{
+    background-color: #77B2D3;
+    color: #fff;
+    height: 74px;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %manrope-800;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  &__item-item{
+    padding-left: 23px;
+    position: relative;
+    &::before{
+      content: '';
+      width: 17.25px;
+      height: 17.25px;
+      position: absolute;
+      background-image: url(../images/icons/check.svg);
+      left: 0;
+      top: 4px;
+    }
+  }
+  .services__item-btn{
+    @extend %btn;
+    text-align: center;
+    transition: all .3s ease;
+    &:hover{
+      transform: scale(1.05);
+      color: #d3e014;
+    }
+  }
 }

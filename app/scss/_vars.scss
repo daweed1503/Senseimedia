@@ -1,8 +1,9 @@
 $default: #333;
-$gradient: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%);
+$gradient: rgba(243,44,109,1);
+$bg: #F7F6FF;
 
 %btn{
-background: $gradient;
+background-color: $gradient;
 color: #fff;
 @extend %manrope-600;
 padding: 14px 35px;
@@ -20,4 +21,12 @@ border-radius: 9px;
 %manrope-600{
   font-family: "Manrope", sans-serif;
   font-weight: 600;
+}
+%manrope-700{
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+}
+%manrope-800{
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
 }

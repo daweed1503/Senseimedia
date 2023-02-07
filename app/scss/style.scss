@@ -225,6 +225,7 @@
   &__item-item{
     padding-left: 23px;
     position: relative;
+    line-height: 24px;
     &::before{
       content: '';
       width: 17.25px;
@@ -243,5 +244,66 @@
       transform: scale(1.05);
       color: #d3e014;
     }
+  }
+}
+.consultation{
+  padding: 45px 0 56px;
+  &__inner{
+    display: flex;
+  }
+  &__content{
+    max-width: 570px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  &__title{
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    margin-bottom: 22px;
+  }
+  &__form{
+    width: 100%;
+  }
+  &__textbox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__input{
+    max-width: 270px;
+    width: 48%;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 7px;
+    padding: 15px;
+  }
+  &__textarea{
+    width: 100%;
+    resize: none;
+    height: 140px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+  &__label-checkbox{
+    display: inline-flex;
+    align-items: center;
+    @extend %manrope-300;
+    margin-bottom: 15px;
+    input{
+      margin-right: 5px;
+    }
+  }
+  &__btn{
+    @extend %btn;
+    cursor: pointer;
+    border: none;
+  }
+  &__img{
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
   }
 }

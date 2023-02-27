@@ -1,19 +1,16 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
-*::after,
-*::before {
-  box-sizing: inherit;
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
 }
 
-body,
 h1,
 h2,
 h3,
@@ -21,34 +18,67 @@ h4,
 h5,
 h6,
 p,
-ul,
-ol,
 li,
 figure,
 figcaption,
 blockquote,
 dl,
 dd {
+    margin: 0;
+    font-size: 1em;
+    font-weight: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
   margin: 0;
 }
 
-ul[class] {
-  list-style: none;
+ul[class],
+ol[class] {
+    list-style: none;
 }
 
-a[class] {
-  text-decoration: none;
-  color: inherit;
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
+    color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -29,3 +29,16 @@ main{
   line-height: 48px;
   text-transform: uppercase;
 }
+
+@media(max-width: 620px){
+  .title{
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+@media(max-width: 480px){
+  .title{
+    font-size: 28px;
+  }
+}

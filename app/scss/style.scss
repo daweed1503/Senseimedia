@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 
@@ -17,6 +18,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__btn{
+    display: none;
   }
   .header__phone{
     @extend %btn;
@@ -46,17 +50,20 @@
 }
 .footer-top{
   padding: 50px 0 70px;
+  .logo{
+    img{
+      position: relative;
+      right: 12px;
+    }
+  }
   &__inner{
     display: flex;
     justify-content: space-between;
-  }
-  &__item{
-    max-width: 325px;
+    gap: 20px;
   }
   .footer-top__privacy{
     display: block;
     margin-bottom: 22px;
-    padding-left: 12px;
     line-height: 24px;
     transition: all .3s;
     &:hover{
@@ -66,7 +73,6 @@
   .footer-top__contact{
     @extend %btn;
     display: inline-block;
-    margin-left: 12px;
     transition: all .3s ease;
     &:hover{
       transform: scale(1.05);
@@ -115,12 +121,18 @@
       @extend %manrope-500;
       font-size: 55px;
       text-transform: uppercase;
+      display: block;
     }
   }
   &__subtitle{
     @extend %manrope-500;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  &__links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   .main-page__link{
     background-color: #77B2D3;
@@ -130,9 +142,6 @@
     transition: all 0.3s ease-in-out;
     &:hover{
       background-color: #25709b;
-    }
-    & + .main-page__link{
-      margin-left: 5px;
     }
   }
 }
@@ -178,12 +187,14 @@
   &__items{
     display: flex;
     justify-content: space-between;
-    // flex-wrap: wrap;
+    gap: 18px;
   }
   &__item-wrapper{
     display: flex;
     flex-direction: column;
     max-width: 220px;
+    margin: 0 auto;
+    width: 100%;
   }
   &__item{
     background-color: #FFF;
@@ -289,9 +300,8 @@
     margin-bottom: 10px;
   }
   &__label-checkbox{
-    display: inline-flex;
-    align-items: center;
     @extend %manrope-300;
+    display: block;
     margin-bottom: 15px;
     input{
       margin-right: 5px;
@@ -307,3 +317,79 @@
     border-radius: 20px;
   }
 }
+.works{
+  padding: 56px 0 90px;
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__item{
+    max-width: 570px;
+    background-color: #fff;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+  }
+  &__img{
+    padding: 10px 0 0 20px;
+    display: inline-block;
+  }
+  &__img--macys{
+    padding: 40px 0 22px 20px;
+    display: inline-block;
+  }
+  &__text{
+    padding: 0 25px;
+    margin-bottom: 20px;
+  }
+  &__results{
+    background-color: $bg;
+    padding: 20px 25px;
+  }
+  &__results-title{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    @extend %manrope-800;
+  }
+  &__result-inner{
+    display: flex;
+  }
+  &__result-title{
+    @extend %manrope-800;
+    font-size: 18px;
+  }
+  &__system-title{
+    padding: 20px 0 0 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    @extend %manrope-800;
+  }
+  &__system-links{
+    display: flex;
+    align-items: center;
+    padding: 0 0 25px 20px;
+  }
+  .swiper-button-prev{
+    padding: 0;
+    border: none;
+    position: absolute;
+    left: -40px;
+    cursor: pointer;
+    top: 52%;
+    font-size: 0;
+  }
+  .swiper-button-next{
+    padding: 0;
+    border: none;
+    position: absolute;
+    right: -40px;
+    cursor: pointer;
+    top: 52%;
+    font-size: 0;
+  }
+  .container{
+    position: relative;
+  }
+}
+
+@import "media";
